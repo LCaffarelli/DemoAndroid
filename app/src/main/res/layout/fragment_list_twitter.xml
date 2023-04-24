@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".tpTwitter.ListTwitterFragment">
+
+        <!--tweet-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <!--1ere ligne tweet-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!--image-->
+                <ImageView
+                    android:layout_width="124dp"
+                    android:layout_height="124dp"
+                    android:src="@drawable/dango" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="8dp">
+
+                    <!--    user-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="@string/dango"
+                        android:textStyle="bold" />
+
+                    <!--    texte-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_ut_venenatis_dolor_magna_nec_interdum_risus_ultricies_in_praesent_a_aliquet_dolor_cras_sit_amet_diam_aliquam_dignissim_lectus_et_finibus_turpis_sed_mi_velit_facilisis_eget_placerat_eu_dapibus_nec_ex" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--    footer tweet-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:padding="10dp">
+
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#0000"
+                    android:padding="0dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/reply" />
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#0000"
+                    android:padding="0dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/retweet" />
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#0000"
+                    android:padding="0dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/favorite" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</layout>

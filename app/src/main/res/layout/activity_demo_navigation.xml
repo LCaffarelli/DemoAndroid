@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?><!--layout = obligatoire pour activer le dataBinding-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".demoNavFragment.DemoNavigationActivity">
+
+        <!-- On vient créer un fragment qui va prendre toute la place de l'écran
+             On lui donne un id, navHostContainer car c'est celui qui gere la navigation
+             On précise le type de navigation avec le name=""
+             On appelle le type de la ressource avec @navigation et on y met les regles de navigation que l'on a defini
+             On oublie pas de deplacer les intent-filter dans le manifest, ou l'activity a normalement été fait automatiquement    -->
+        <fragment
+            android:id="@+id/navHostContainer"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:navGraph="@navigation/nav_graph" />
+    </LinearLayout>
+
+</layout>
+

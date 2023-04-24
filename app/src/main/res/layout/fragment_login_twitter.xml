@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".tpTwitter.LoginTwitterFragment">
+
+        <!--login form-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:text="@string/connexion_twitter"
+                android:textAlignment="center"
+                android:textColor="#B8B7B7"
+                android:textSize="20sp" />
+
+            <!--ajout de la connexion par mail-->
+            <EditText
+                android:id="@+id/editMail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/identifiant"
+                android:inputType="textEmailAddress">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/editPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="@string/mot_de_passe"
+                android:inputType="textPassword">
+
+            </EditText>
+
+            <!--Ajout switch + mémorisations des informations-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <Switch
+                    android:id="@+id/switch_connexion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@id/switch_connexion" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/m_moriser_mes_informations"
+                    android:textColor="#B8B7B7" />
+            </LinearLayout>
+
+            <!--    Ajout du bouton connexion -->
+            <Button
+                android:id="@+id/btnConnexion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="#58B0F0"
+                android:text="@string/connexion" />
+
+<!--            message pour les erreurs ou pour le succes de connexion-->
+            <TextView
+                android:id="@+id/tv_FormMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+</layout>

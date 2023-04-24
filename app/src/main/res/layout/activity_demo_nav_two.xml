@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DemoNav.DemoNavTwoActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="J'ai cliqué sur le bouton"
+        android:textAlignment="center"
+        android:textSize="20sp">
+
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+<!--        Bouton pour relance une nouvelle activité-->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ouvrir oneActivy"
+            android:onClick="onClickOneActivity">
+
+        </Button>
+
+<!--        Bouton pour fermer toutes les activités en pile sauf la dernière-->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tout fermer sauf la 1ere pile"
+            android:onClick="onClickCloseAllToRoot">
+
+        </Button>
+
+    </LinearLayout>
+
+</LinearLayout>

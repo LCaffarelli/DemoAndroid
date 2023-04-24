@@ -1,161 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
-    >
-    <!--Header -->
+    xmlns:tools="http://schemas.android.com/tools">
+
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="15dp"
-        android:background="#5E1ECF">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".tpTwitter.MainActivity">
 
-        <TextView
+        <!--header-->
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Wololo"
-            android:textColor="@color/white" />
-    </LinearLayout>
+            android:layout_height="64dp"
+            android:background="#58B0F0"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            android:textAlignment="center">
 
-    <!--Titre -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="15dp">
 
-        <TextView
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#0000"
+                android:padding="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/pencil"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="Accueil"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                tools:ignore="RtlCompat" />
+
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#0000"
+                android:padding="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/search"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <!--content-->
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="The Questionnaire"
-            android:textAlignment="center"
-            android:textSize="25sp" />
-
-    </LinearLayout>
-
-    <!--Question1+bouton-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20sp"
+            android:layout_height="0dp"
             android:layout_weight="1"
-            android:text="Est ce que ça va ? "
-            android:textAlignment="center" />
+            android:orientation="vertical">
 
-        <Switch
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:theme="@style/TextAppearance.AppCompat.Widget.Switch"
+<!--            navContainer-->
+            <fragment
+                android:id="@+id/navHostContainerTwitter"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:navGraph="@navigation/nav_graph_twitter" />
 
-            ></Switch>
 
-    </LinearLayout>
+        </LinearLayout>
 
-    <!--Question 2-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
-
-        <TextView
+        <!--footer-->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:text="Quel est ton niveau en bilboquet ?"
-            android:textAlignment="center" />
-    </LinearLayout>
+            android:orientation="horizontal">
 
-    <!--SeekBar -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
+            <!--changer les boutons pour des imageButton-->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:text="@string/fil"
+                android:textColor="#B8B7B7" />
 
-        <SeekBar
-            android:layout_width="240dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="90dp" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:text="@string/notification"
+                android:textColor="#B8B7B7" />
 
-    </LinearLayout>
+            <Button
 
-    <!--Question 3-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:text="@string/message"
+                android:textColor="#B8B7B7" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Quelle est ton adresse email ?"
-            android:textSize="18sp"
-            android:textAlignment="center" />
-    </LinearLayout>
+            <Button
 
-    <!--Ajout adresse mail-->
-        <EditText
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:layout_gravity="center_horizontal"
-            android:inputType="textEmailAddress" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:text="@string/moi"
+                android:textColor="#B8B7B7" />
 
-    <!--Ajout des boutons-->
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="OK" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="OK" />
+        </LinearLayout>
 
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="-10dp"
-        android:orientation="horizontal">
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="OK" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="OK" />
-
-
-    </LinearLayout>
-
-</LinearLayout>
-
-
-
-
+</layout>

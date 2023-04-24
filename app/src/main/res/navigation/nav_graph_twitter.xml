@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_twitter"
+    app:startDestination="@id/LoginTwitterFragment">
+
+    <fragment
+        android:id="@+id/LoginTwitterFragment"
+        android:name="com.example.demoandroid.tpTwitter.LoginTwitterFragment"
+        android:label="fragment_login_twitter"
+        tools:layout="@layout/fragment_login_twitter" >
+        <action
+            android:id="@+id/action_LoginTwitterFragment_to_ListTwitterFragment"
+            app:destination="@id/ListTwitterFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ListTwitterFragment"
+        android:name="com.example.demoandroid.tpTwitter.ListTwitterFragment"
+        android:label="fragment_list_twitter"
+        tools:layout="@layout/fragment_list_twitter"
+
+        />
+</navigation>

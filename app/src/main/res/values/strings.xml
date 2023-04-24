@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">DemoAndroid</string>
+    <string name="connexion_twitter">Connexion à Twitter</string>
+    <string name="lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_ut_venenatis_dolor_magna_nec_interdum_risus_ultricies_in_praesent_a_aliquet_dolor_cras_sit_amet_diam_aliquam_dignissim_lectus_et_finibus_turpis_sed_mi_velit_facilisis_eget_placerat_eu_dapibus_nec_ex">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis dolor magna, nec interdum risus ultricies in. Praesent a aliquet dolor. Cras sit amet diam aliquam, dignissim lectus et, finibus turpis. Sed mi velit, facilisis eget placerat eu, dapibus nec ex.</string>
+    <string name="identifiant">Identifiant</string>
+    <string name="mot_de_passe">Mot de passe</string>
+    <string name="notification">Notification</string>
+    <string name="message">Message</string>
+    <string name="fil">Fil</string>
+    <string name="moi">Moi</string>
+    <string name="dango">Dango</string>
+    <string name="m_moriser_mes_informations">Mémoriser mes informations</string>
+    <string name="connexion">Connexion</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="accueil">Accueil</string>
 </resources>
