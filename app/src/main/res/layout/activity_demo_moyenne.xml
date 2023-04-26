@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="moyenneViewModel"
+            type="com.example.demoandroid.demoMoyenneViewModel.MoyenneClassroomViewModel" />
+    </data>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".demoMoyenneViewModel.DemoMoyenne">
+
+        <!--        On vient faire le bouton avec une lambda, on utilise maintenant des @{} pour faire le lien avec le ViewModel
+                    avec ViewModel on a pas besoin de mettre un id
+        -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> moyenneViewModel.calculerMoy()}" />
+
+        <!--
+                    Pour récuperer le texte on doit utiliser le @{} afin d'acceder au ViewModel, on precise le type de données que l'on veut récuperer. Ici c'est un
+                    float que l'on va parser en string, d'ou le valueOf. En parametre on passe le ViewModel que l'on a parametré dans la variable plus haut puis la methode que l'on
+                    a fait dans le VM
+        -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(moyenneViewModel.moyenne)}" />
+
+        <!--        exemple de comment récuperer un text saisi
+                    il ne faut pas oublier de mettre le = apres l'@ sinon c'est de la lecture seule et on ne recupere pas la saisie
+        -->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={moyenneViewModel.maSaisie}" />
+
+        <!--appelle la methode verifSaisie-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> moyenneViewModel.verifSaisie()}" />
+    </LinearLayout>
+</layout>

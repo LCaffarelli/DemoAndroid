@@ -13,18 +13,20 @@
         android:theme="@style/Theme.DemoAndroid"
         tools:targetApi="31">
         <activity
+            android:name=".demoMoyenneViewModel.DemoMoyenne"
+            android:exported="false" />
+        <activity
             android:name=".demoNavFragment.DemoNavigationActivity"
-            android:exported="false"/>
-
+            android:exported="false" />
         <activity
             android:name=".DemoNav.DemoNavTwoActivity"
             android:exported="false" />
         <activity
             android:name=".DemoNav.DemoNavOne"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".tpTwitter.MainActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
